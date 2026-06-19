@@ -41,5 +41,6 @@ sudo systemctl enable sonarqube
 sudo systemctl start sonarqube
 
 
-
+cd ..
+rm -rf SonarAndNexusBash
 
