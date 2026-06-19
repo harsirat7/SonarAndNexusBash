@@ -10,7 +10,7 @@ cd /opt
 
 #importing tar file
 wget https://download.sonatype.com/nexus/3/nexus-3.93.0-06-linux-x86_64.tar.gz
-tar -xvzf latest-linux-x86_64.tar.gz
+tar -xvzf nexus-3.93.0-06-linux-x86_64.tar.gz
 rm -rf nexus-3.93.0-06-linux-x86_64.tar.gz
 
 #renaming file
