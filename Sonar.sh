@@ -21,8 +21,15 @@ sudo chmod -R 775 /opt/sonarqube
 #importing files
 git clone https://github.com/harsirat7/SonarAndNexusBash.git
 cd SonarAndNexusBash/
+rm Sonar.sh
+sed -i 's/\r$//' sysctl.conf
+sed -i 's/\r$//' sonarqube.service
+
+#moving file to /etc/
+mv sysctl.conf /etc/
 
 
 
 
-sed -i 's/\r$//' script.sh
+
+
