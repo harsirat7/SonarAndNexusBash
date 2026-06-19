@@ -24,11 +24,21 @@ cd SonarAndNexusBash/
 rm Sonar.sh
 sed -i 's/\r$//' sysctl.conf
 sed -i 's/\r$//' sonarqube.service
+sed -i 's/\r$//' limits.conf
 
 #moving file to /etc/
 mv sysctl.conf /etc/
+sysctl -p
+
+#moving limits.conf
+mv limits.conf /etc/security/limits.conf
 
 
+#moving service file
+mv sonarqube.service /etc/systemd/system/
+sudo systemctl daemon-reload
+sudo systemctl enable sonarqube
+sudo systemctl start sonarqube
 
 
 
